@@ -506,4 +506,4 @@ app.get('/pricesMisc', (req, res) => {
 });
 
 import serverless from "serverless-http";
-export const handler = serverless(app);
+export default serverless(app);
