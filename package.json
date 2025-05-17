@@ -1,16 +1,21 @@
 {
-  "name": "my-vercel-express-app",
+  "name": "rpcwiki",
   "version": "1.0.0",
+  "description": "Wiki for the RPC-Asia Server",
+  "main": "api/server.js",
   "type": "module",
   "scripts": {
-    "dev": "vercel dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "vercel dev",
+    "dev": "node server.js",
     "build": "echo \"No build step needed\" && exit 0",
     "vercel-build": "npm run build"
   },
   "engines": {
     "node": "18.x"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
