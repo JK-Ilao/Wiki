@@ -6,5 +6,11 @@
             "src": "/(.*)",
             "destination": "server.js"
         }
+    ],
+    "rewrites": [
+        {
+            "src": "/(.*)",
+            "destination": "server.js"
+        }
     ]
 }
