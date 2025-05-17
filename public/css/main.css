@@ -1,0 +1,44 @@
+/* main.css */
+
+body {
+    background-color: #333;
+    color: #fff;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    display: flex; /* Use CSS Flex */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    gap: 10px; /* Adjust this to control the space between buttons */
+}
+
+.button-container button {
+    padding: 15px 25px;
+    background-color: #007bff;
+    color: #fff;
+    border: none; /* Remove the default button border */
+    border-radius: 50px; /* Make the buttons round */
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Add a larger, softer shadow */
+    transition: all 0.3s ease; /* Add a transition for smooth hover effect */
+    text-align: center; /* Center the text */
+    width: 200px; /* Set a fixed width */
+    outline: none; /* Remove the outline */
+}
+
+/* Hover effect */
+.button-container button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4); /* Make the shadow larger and darker when hovering */
+    transform: translateY(-3px); /* Move the button up a bit when hovering */
+}
+
+/* Active (click) effect */
+.button-container button:active {
+    transform: translateY(1px); /* Move the button down a bit when clicked */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* Make the shadow smaller when clicked */
+}

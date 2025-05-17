@@ -1,0 +1,68 @@
+body {
+    background-color: #333;
+    color: #fff;
+}
+
+@media (max-width: 999px) {
+    #details {
+        grid-template-columns: 1fr; /* Changes the grid to a single column */
+    }
+    
+}
+@media (min-width: 1000px) {
+    #details {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Creates a grid with three equal columns */
+        gap: 20px; /* Adds some space between the grid items */
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    background-color: #444; /* Darker background for contrast */
+    padding: 30px; /* Increased padding for a spacious look */
+    margin-bottom: 20px;
+    border-radius: 15px; /* More rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.container img {
+    object-fit: cover; /* Ensures the image fills its container */
+    width: 30%; /* Full width for a responsive design */
+    height: auto;
+    margin-bottom: 15px; /* Space between the image and text */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+.text-container {
+    text-align: left; /* Center-align text for a balanced look */
+    flex-grow: 1;
+    color: #ddd; /* Slightly lighter text for readability */
+    font-size: 1.1rem; /* Slightly larger font size */
+    /* line-height: 1.6; Improved line spacing */
+}
+
+a {
+    color: #66CCFF;
+    text-decoration: none; /* Remove underline for a cleaner look */
+    font-weight: bold; /* Make links stand out */
+}
+
+a:hover {
+    color: #33AACC; /* Slightly darker color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+a:visited {
+    color: #66CCFF;
+}
+a:link{
+    color: #66CCFF;
+}

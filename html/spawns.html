@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <title>Spawns History</title>
+        <link rel="stylesheet" type="text/css" href="css/history.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/spawns.js" defer></script>
+    </head>
+    <body>
+        <h1>Spawns History</h1>
+        <label for="historySelect">Select History:</label>
+        <select id="historySelect">
+            <option value="legendary">Legendary</option>
+            <option value="ultrabeast">Ultra Beast</option>
+        </select>
+        <div class="container">
+            <div class="chart-container">
+                <canvas id="chartContainer"></canvas>
+            </div>
+            <div class="list-container">
+                <ul id="listContainer"></ul>
+            </div>
+            <div class="playerStatsContainer">
+                <ul id="playerStatsContainer"></ul>
+            </div>
+            <div class="spawnListContainer">
+                <ul id="spawnListContainer"></ul>
+            </div>
+        </div>
+        <footer>
+            <p id="footerTime">&copy;</p>
+        </footer>
+    </body>
+</html>

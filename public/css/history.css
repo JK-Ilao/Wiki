@@ -1,0 +1,164 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff; /* White for headings */
+}
+
+label {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #e0e0e0; /* Light text color */
+}
+
+select {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 5px;
+    font-size: 1em;
+    background-color: #1e1e1e; /* Darker background for dropdown */
+    color: #e0e0e0; /* Light text color */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 5px;
+}
+
+/* Layout for the chart and list */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.chart-container {
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 300px;
+    background: #1e1e1e; /* Dark background for chart container */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-container canvas {
+    max-width: 100%;
+    max-height: 400px; /* Limit the height of the chart */
+}
+
+.list-container {
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 300px;
+    background: #1e1e1e; /* Dark background for list container */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    overflow-y: auto; /* Add scroll if the list is too long */
+    max-height: 400px; /* Limit the height of the list */
+}
+
+.list-container ul li:hover {
+    text-decoration: underline;
+    color: lightblue;
+}
+
+.playerStatsContainer {
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 300px;
+    background: #1e1e1e; /* Dark background for list container */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    overflow-y: auto; /* Add scroll if the list is too long */
+    max-height: 400px; /* Limit the height of the list */
+}
+
+.playerStatsContainer ul li:hover {
+    text-decoration: underline;
+    color: lightblue;
+}
+
+.spawnListContainer {
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 300px;
+    background: #1e1e1e; /* Dark background for list container */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    overflow-y: auto; /* Add scroll if the list is too long */
+    max-height: 400px; /* Limit the height of the list */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #2a2a2a; /* Slightly lighter background for list items */
+    border: 1px solid #444; /* Subtle border */
+    border-radius: 5px;
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Footer styling */
+footer {
+    background-color: #1e1e1e; /* Dark background for footer */
+    color: #e0e0e0; /* Light text color */
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #333; /* Subtle border at the top */
+    font-size: 0.9em;
+    position: relative; /* Default positioning */
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .chart-container, .list-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .chart-container canvas {
+        max-height: 300px; /* Adjust chart height for smaller screens */
+    }
+
+    .list-container {
+        max-height: 300px; /* Adjust list height for smaller screens */
+    }
+    .playerStatsContainer {
+        max-height: 300px; /* Adjust list height for smaller screens */
+    }
+    .spawnListContainer {
+        max-height: 300px; /* Adjust list height for smaller screens */
+    }
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prices</title>
+        <link rel="stylesheet" type="text/css" href="css/prices.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <nav id="navbar"></nav>
+        <div id="prices"></div>
+        <script type="module" src="js/PriceM.js"></script>
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        </script>
+    </body>
+</html>
