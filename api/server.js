@@ -1,6 +1,5 @@
 import express from 'express';
 import sqlite3 from 'sqlite3';
-import serverless from "serverless-http";
 import cors from 'cors';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -506,4 +505,5 @@ app.get('/pricesMisc', (req, res) => {
   });
 });
 
+import serverless from "serverless-http";
 export const handler = serverless(app);
