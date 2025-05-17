@@ -1,5 +1,6 @@
 import express from 'express';
 import sqlite3 from 'sqlite3';
+import serverless from "serverless-http";
 import cors from 'cors';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -13,6 +14,7 @@ const port = 3000;
 // Add these lines to parse incoming POST bodies
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 // Log all POST requests
 app.use((req, res, next) => {
@@ -55,7 +57,6 @@ process.on('uncaughtException', (err, origin) => {
   console.log('Caught exception:', err, 'Exception origin:', origin);
 });
 
-app.use(cors());
 console.log('Public:');
 app.use('/css', express.static(path.join(__dirname, '..', 'public', 'css')));
 app.use('/js', express.static(path.join(__dirname, '..', 'public', 'js')));
@@ -505,6 +506,4 @@ app.get('/pricesMisc', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
-});
+export const handler = serverless(app);
